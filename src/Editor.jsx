@@ -1,18 +1,18 @@
+// Editor.jsx
 import React from "react";
 
-
-
-const Editor = ({markdown, handleChange}) => {
+const Editor = ({ markdown, setMarkdown }) => {
   return (
-    <div>
-     <h1>Markdown Editor</h1>
+    <div className="editor-container">
+      <h1>Editor</h1>
       <textarea
         id="editor"
         value={markdown}
-        onChange={handleChange}
-        placeholder="Enter Markdown here" />
+        onChange={(e) => setMarkdown(e.target.value)}
+        placeholder="Enter Markdown here"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Editor
+export default Editor;
